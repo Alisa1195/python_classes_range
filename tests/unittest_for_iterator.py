@@ -13,10 +13,11 @@ class TestIterator(unittest.TestCase):
 
     def test_MyRange(self):
         iterator = range_iterator.MyRange(0, 10, 2)
-        self.assertEqual(2, next(iterator))
-        self.assertEqual(4, next(iterator))
-        self.assertEqual(6, next(iterator))
-        self.assertEqual(8, next(iterator))
+        myrange_list = [0]
+        for i in range(0, 8, 2):
+            myrange_list.append(next(iterator))
+        range_list = [i for i in range(0, 10, 2)]
+        self.assertEqual(myrange_list, range_list)
 
 
 unittest.main()
