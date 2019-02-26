@@ -11,9 +11,12 @@ from range_iterator import *
 
 class TestIterator(unittest.TestCase):
 
-    def test_my_range(self):
+    def test_MyRange(self):
         iterator = range_iterator.MyRange(0, 10, 2)
         self.assertEqual(2, next(iterator))
+        self.assertEqual(4, next(iterator))
+        self.assertEqual(6, next(iterator))
+        self.assertEqual(8, next(iterator))
 
 
 unittest.main()
