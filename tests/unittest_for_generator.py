@@ -11,9 +11,13 @@ from range_generator import *
 
 class TestGenerator(unittest.TestCase):
 
-    def test_my_range(self):
+    def test_MyRange(self):
         generator = range_generator.MyRange(0, 10, 2)
         self.assertEqual(0, next(generator))
+        self.assertEqual(2, next(generator))
+        self.assertEqual(4, next(generator))
+        self.assertEqual(6, next(generator))
+        self.assertEqual(8, next(generator))
 
 unittest.main()
 
