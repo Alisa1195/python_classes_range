@@ -19,6 +19,14 @@ class TestGenerator(unittest.TestCase):
         self.assertEqual(6, next(generator))
         self.assertEqual(8, next(generator))
 
+        generator = range_generator.MyRange(0, 100, 10)
+        a = 0
+        for i in range(10):
+            a = next(generator)
+        self.assertEqual(90, a)
+
+
+
 unittest.main()
 
 
