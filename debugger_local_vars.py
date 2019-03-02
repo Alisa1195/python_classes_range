@@ -2,10 +2,9 @@ import sys
 
 
 def tracefunc(frame, event, arg):
-    name = frame.f_code.co_name
-    locals = frame.f_locals
     if event == "return":
-        print("function: {} , locals: {} ".format(name, locals))
+        print("function: {} , locals: {} ".format(frame.f_code.co_name, frame.f_locals))
+
     return tracefunc
 
 
