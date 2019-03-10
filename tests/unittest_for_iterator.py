@@ -2,11 +2,13 @@ import unittest
 import os
 import sys
 import inspect
+import range_iterator
+from range_iterator import *
+
 current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 parent_dir = os.path.dirname(current_dir)
 sys.path.insert(0, parent_dir)
-import range_iterator
-from range_iterator import *
+
 
 
 class TestIterator(unittest.TestCase):
